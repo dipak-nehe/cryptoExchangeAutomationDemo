@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Class-Path: groovy-3.0.2.jar groovy-xml-3.0.2.jar hamcrest-2.1.jar tag
+ soup-1.2.1.jar json-path-4.3.0.jar groovy-json-3.0.2.jar json-schema-
+ validator-4.3.0.jar json-schema-validator-2.2.10.jar json-schema-core
+ -1.2.10.jar jackson-coreutils-1.9.jar jackson-databind-2.2.3.jar jack
+ son-annotations-2.2.3.jar jackson-core-2.2.3.jar msg-simple-1.1.jar b
+ tf-1.2.jar uri-template-0.9.jar rhino-1.7.7.1.jar mailapi-1.4.3.jar j
+ oda-time-2.9.7.jar libphonenumber-8.0.0.jar jsr305-3.0.1.jar jopt-sim
+ ple-5.0.3.jar xml-path-4.3.0.jar commons-lang3-3.4.jar jakarta.xml.bi
+ nd-api-2.3.2.jar jaxb-osgi-2.3.0.1.jar org.apache.sling.javax.activat
+ ion-0.1.0.jar rest-assured-common-4.3.0.jar rest-assured-all-4.3.0.ja
+ r jakarta.activation-api-1.2.1.jar activation-1.1.1.jar guava-19.0.ja
+ r json-simple-1.1.1.jar junit-4.10.jar hamcrest-core-1.1.jar commons-
+ codec-1.14.jar poi-4.1.2.jar commons-collections4-4.4.jar commons-mat
+ h3-3.6.1.jar SparseBitSet-1.2.jar poi-ooxml-4.1.2.jar poi-ooxml-schem
+ as-4.1.2.jar xmlbeans-3.1.0.jar commons-compress-1.19.jar curvesapi-1
+ .06.jar json-path-2.0.0.jar slf4j-api-1.7.10.jar json-smart-2.1.1.jar
+  asm-1.0.2.jar asm-3.3.1.jar
+Build-Jdk-Spec: 1.8
+Created-By: Maven Integration for Eclipse
+Main-Class: org.gemini.com
+
