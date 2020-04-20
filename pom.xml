@@ -131,6 +131,8 @@
             <artifactId>maven-compiler-plugin</artifactId>
             <version>3.1</version>
             <configuration>
+            <release>8</release>
+        <verbose>true</verbose>
                 <fork>true</fork>
                 <executable>/usr/local/openjdk-8/bin/java/javac</executable> 
                                    <compilerVersion>1.8</compilerVersion>
