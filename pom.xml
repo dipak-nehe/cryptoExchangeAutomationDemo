@@ -129,7 +129,7 @@
   
         <plugin>
             <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.5.1</version>
+            <version>3.1</version>
             <configuration>
                 <fork>true</fork>
                 <executable>/usr/local/openjdk-8/bin/java/javac</executable> 
