@@ -129,12 +129,10 @@
   
         <plugin>
             <artifactId>maven-compiler-plugin</artifactId>
-            <version>3.1</version>
+            <version>3.5.1</version>
             <configuration>
-            <release>8</release>
-        <verbose>true</verbose>
+            
                 <fork>true</fork>
-                <executable>/usr/local/openjdk-8/bin/java/java</executable> 
                                    <compilerVersion>1.8</compilerVersion>
                 
                 <source>1.8</source>
