@@ -38,11 +38,21 @@ public class excelWriteTransactionIds {
        // System.out.println("Creating excel");
         int rowNum = 1;
         XSSFRow row1 = sheet.createRow(0); 
+        List<String> headerList = new LinkedList<String>();
+        headerList = excelWriteTransactionIds.headerList();
+        Iterator<String> it = headerList.iterator();
+        int headerColumn=0;
+
+        while(it.hasNext())
+        {
+            
+        	Cell cell1 = row1.createCell(headerColumn++);
+            cell1.setCellValue(it.next().toString());           
+        }
 
         for (String mapKey : orderJSONObjectMap.keySet()) 
         {
             int colNum = 0;
-            int headerColumn=0;
          
 
            
@@ -53,16 +63,7 @@ public class excelWriteTransactionIds {
             JSONObject jsonObj = orderJSONObjectMap.get(mapKey);
            // int headerCount=0;
             
-            List<String> headerList = new LinkedList<String>();
-            headerList = excelWriteTransactionIds.headerList();
-            Iterator<String> it = headerList.iterator();
             
-            while(it.hasNext())
-            {
-                
-            	Cell cell1 = row1.createCell(headerColumn++);
-                cell1.setCellValue(it.next().toString());           
-            }
 
 
             for (Object keyStr : jsonObj.keySet())

@@ -6,7 +6,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import static java.nio.charset.StandardCharsets.*;
+//import static java.nio.charset.StandardCharsets.*;
 import java.sql.Timestamp;
 import java.text.DecimalFormat;
 import java.util.Base64;
@@ -21,9 +21,11 @@ public class geminiExchangeFinal
 int errorId = 0;
 private static String resultFileName = "./Output/GeminiResults";
 private static String gemini_api_key =    "account-BQudD0pPBZ3RmCeZ1zQ6";
-private static String gemini_api_secret1 = "8cmQ7jr9DZhswuQ7gj1E3BPbR7a";
-private static byte[] ptext = gemini_api_secret1.getBytes(UTF_8); 
-private static String gemini_api_secret = new String(ptext, UTF_8);
+//private static String gemini_api_secret1 = "8cmQ7jr9DZhswuQ7gj1E3BPbR7a";
+//private static byte[] ptext = gemini_api_secret1.getBytes(UTF_8); 
+//private static String gemini_api_secret = new String(ptext, UTF_8);
+private static String gemini_api_secret = "8cmQ7jr9DZhswuQ7gj1E3BPbR7a";
+
 private static final String HMAC_SHA1_ALGORITHM = "HmacSHA384";
 public static Map<String,String>transactionStatus = new LinkedHashMap<String,String>();
 public static Map<String,JSONObject> orderJSONObjecMap = new LinkedHashMap<String,JSONObject>();
@@ -124,8 +126,8 @@ private static String geminiBytesToHex(final byte[] hash) {
 
 		//System.out.print("nonce_unixTime"+nonce_unixTime);
 		//Base64 encoding of the payload
-		Base64.Encoder encoder = Base64.getEncoder();
-		gemini_api_secret =  encoder.encodeToString(gemini_api_secret.getBytes());
+		//Base64.Encoder encoder = Base64.getEncoder();
+		//gemini_api_secret =  encoder.encodeToString(gemini_api_secret.getBytes());
 
 
 		//Base64 encoding needed for the REST API call
@@ -134,7 +136,7 @@ private static String geminiBytesToHex(final byte[] hash) {
 		
 
 		//encode the Secret Key using the HMACSHA384 algorithm
-	 	SecretKeySpec signingKey = new SecretKeySpec(gemini_api_secret1.getBytes(), HMAC_SHA1_ALGORITHM);
+	 	SecretKeySpec signingKey = new SecretKeySpec(gemini_api_secret.getBytes(), HMAC_SHA1_ALGORITHM);
 	    Mac mac = Mac.getInstance(HMAC_SHA1_ALGORITHM);
 	    mac.init(signingKey);
 	    String Signature = geminiBytesToHex(mac.doFinal(encodedString.getBytes()));
